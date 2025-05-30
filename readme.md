@@ -1,92 +1,59 @@
-# AI-Ticket-Assistant - ChaiCode
+# AI Ticket Assistant
 
-Welcome to the AI-Powered Ticket Management System!
-This course is a part of Chaicode youtube video series. This project is a web application that uses AI to automatically categorize, prioritize, and assign support tickets to the most appropriate moderators.
+A smart, AI-powered ticket management system that automatically categorizes, prioritizes, and assigns support tickets to the most suitable moderators based on their skills and availability.
 
-# AI-Powered Ticket Management System
-
-A smart ticket management system that uses AI to automatically categorize, prioritize, and assign support tickets to the most appropriate moderators.
+---
 
 ## 🚀 Features
 
 - **AI-Powered Ticket Processing**
-
-  - Automatic ticket categorization
-  - Smart priority assignment
+  - Automatic ticket categorization and priority assignment
   - Skill-based moderator matching
-  - AI-generated helpful notes for moderators
+  - AI-generated helper notes for moderators
 
 - **Smart Moderator Assignment**
-
-  - Automatic matching of tickets to moderators based on skills
-  - Fallback to admin assignment if no matching moderator found
-  - Skill-based routing system
+  - Matches tickets to moderators based on skillset
+  - Fallback assignment to admin if no match found
+  - Regex-based skill routing
 
 - **User Management**
-
-  - Role-based access control (User, Moderator, Admin)
+  - Role-based access: User, Moderator, Admin
   - Skill management for moderators
-  - User authentication with JWT
+  - Secure JWT-based user authentication
 
 - **Background Processing**
   - Event-driven architecture using Inngest
-  - Automated email notifications
-  - Asynchronous ticket processing
+  - Automated email notifications via Nodemailer
+  - Asynchronous ticket processing and AI handling
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Node.js with Express
-- **Database**: MongoDB
+- **Backend**: Node.js, Express
+- **Database**: MongoDB with Mongoose
 - **Authentication**: JWT
-- **Background Jobs**: Inngest
 - **AI Integration**: Google Gemini API
-- **Email**: Nodemailer with Mailtrap
-- **Development**: Nodemon for hot reloading
+- **Background Jobs**: Inngest
+- **Email**: Nodemailer + Mailtrap
+- **Frontend**: React, Tailwind CSS
 
-## 📋 Prerequisites
+---
 
-- Node.js (v14 or higher)
-- MongoDB
-- Google Gemini API key
-- Mailtrap account (for email testing)
+## ⚙️ Environment Configuration
 
-## ⚙️ Installation
+Create a `.env` file in the root with the following values:
 
-1. **Clone the repository**
+```env
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+MAILTRAP_SMTP_HOST=your_mailtrap_host
+MAILTRAP_SMTP_PORT=your_mailtrap_port
+MAILTRAP_SMTP_USER=your_mailtrap_user
+MAILTRAP_SMTP_PASS=your_mailtrap_password
+GEMINI_API_KEY=your_gemini_api_key
+APP_URL=http://localhost:3000
 
-   ```bash
-   git clone <repository-url>
-   cd ai-ticket-assistant
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Environment Setup**
-   Create a `.env` file in the root directory with the following variables:
-
-   ```env
-   # MongoDB
-   MONGO_URI=your_mongodb_uri
-
-   # JWT
-   JWT_SECRET=your_jwt_secret
-
-   # Email (Mailtrap)
-   MAILTRAP_SMTP_HOST=your_mailtrap_host
-   MAILTRAP_SMTP_PORT=your_mailtrap_port
-   MAILTRAP_SMTP_USER=your_mailtrap_user
-   MAILTRAP_SMTP_PASS=your_mailtrap_password
-
-   # AI (Gemini)
-   GEMINI_API_KEY=your_gemini_api_key
-
-   # Application
-   APP_URL=http://localhost:3000
-   ```
 
 ## 🚀 Running the Application
 
@@ -204,10 +171,6 @@ A smart ticket management system that uses AI to automatically categorize, prior
 - `jsonwebtoken`: ^9.0.2
 - `mongoose`: ^8.13.2
 - `nodemailer`: ^6.10.1
-
-## 🤝 Contributing
-
-we don't accept contributions for this project, as this is a part of a video and code files needs to given as it is.
 
 ## 🙏 Acknowledgments
 
